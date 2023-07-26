@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   # get '/articles/download', to: 'articles#download', as: :article_download
 
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 end
